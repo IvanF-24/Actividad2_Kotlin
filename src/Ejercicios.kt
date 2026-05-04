@@ -179,3 +179,11 @@ fun reto15() {
     println("\n--- Reto 15: IVA Selectivo ---")
     println("Precios con IVA: $conIVA")
 }
+// 16. Mantenimiento de Sensores
+fun reto16() {
+    val sensores = mutableListOf(11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+    sensores.removeAll { it % 3 == 0 }
+
+    println("\n--- Reto 16: Mantenimiento de Sensores ---")
+    println("Sensores funcionales: $sensores")
+}
