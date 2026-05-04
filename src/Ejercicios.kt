@@ -1,3 +1,5 @@
+import kotlin.math.sqrt
+
 // 1. Control de Gastos Diarios
 fun reto1() {
     val gastos = arrayOf(60.0, 18.0, 25.5, 90.0, 12.0, 8.5, 70.0, 33.0, 20.0, 55.0, 45.0, 10.0, 95.0, 22.0, 38.0)
@@ -262,7 +264,7 @@ fun reto21() {
     val esPrimo = BooleanArray(n + 1) { true }
     esPrimo[0] = false
     esPrimo[1] = false
-    for (p in 2..Math.sqrt(n.toDouble()).toInt()) {
+    for (p in 2..sqrt(n.toDouble()).toInt()) {
         if (esPrimo[p]) {
             for (i in p * p..n step p) esPrimo[i] = false
         }
@@ -332,5 +334,24 @@ fun reto25() {
     println("\n--- Reto 25: Rendimiento Maratón ---")
     println("Promedio sin outliers: $promedioReal")
 }
+// 26. Compresión de Logs
+fun reto26() {
+    val logs = listOf("UP", "UP", "DOWN", "UP", "DOWN", "DOWN")
+    val comprimido = mutableListOf<Pair<String, Int>>()
+    var actual = logs[0]
+    var cuenta = 0
+    for (log in logs) {
+        if (log == actual) {
+            cuenta++
+        } else {
+            comprimido.add(actual to cuenta)
+            actual = log
+            cuenta = 1
+        }
+    }
+    comprimido.add(actual to cuenta)
 
+    println("\n--- Reto 26: Compresión Logs ---")
+    println("Resumen: $comprimido")
+}
 
