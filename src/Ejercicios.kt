@@ -91,3 +91,15 @@ fun reto7() {
     consumir("Pasta", 1)
     println("Final: $despensa")
 }
+// 8. Cálculo de Promedio Académico
+fun reto8() {
+    val notas = listOf(3.9 to 0.3, 4.7 to 0.4, 3.5 to 0.3)
+    var notaFinal = 0.0
+    for (par in notas) {
+        notaFinal += par.first * par.second
+    }
+
+    println("\n--- Reto 8: Promedio Académico ---")
+    println("Nota Final: $notaFinal")
+}
+
