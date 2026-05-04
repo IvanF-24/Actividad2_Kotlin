@@ -140,7 +140,7 @@ fun reto11() {
 fun reto12() {
     val ruta = listOf(5 to 5, 6 to 6, 7 to 7, 6 to 6, 5 to 5)
     var esEspejo = true
-    for (i in 0 until ruta.size / 2) {
+    for (i in 0..<ruta.size / 2) {
         if (ruta[i] != ruta[ruta.size - 1 - i]) {
             esEspejo = false
             break
@@ -169,4 +169,13 @@ fun reto14() {
     println("\n--- Reto 14: Ticket Único ---")
     println("Primer ticket único: $unico")
 }
+// 15. Calculadora de IVA Selectiva
+fun reto15() {
+    val productos = mapOf("Queso" to 12000.0, "Pollo" to 45000.0, "Whisky" to 95000.0, "Azúcar" to 3000.0)
+    val conIVA = productos.mapValues { (_, precio) ->
+        if (precio > 50000) precio * 1.19 else precio
+    }
 
+    println("\n--- Reto 15: IVA Selectivo ---")
+    println("Precios con IVA: $conIVA")
+}
