@@ -372,5 +372,23 @@ fun reto28() {
     println("\n--- Reto 28: Parking ---")
     println("Costo por $horas horas: $costo")
 }
+// 29. Parejas de Viaje por Peso
+fun reto29() {
+    val maletas = listOf(12, 18, 7, 23, 9)
+    val target = 30
+    var pareja: Pair<Int, Int>? = null
+    val vistos = mutableSetOf<Int>()
 
+    for (peso in maletas) {
+        val complemento = target - peso
+        if (vistos.contains(complemento)) {
+            pareja = complemento to peso
+            break
+        }
+        vistos.add(peso)
+    }
+
+    println("\n--- Reto 29: Parejas de Carga ---")
+    println("Para target $target, pareja encontrada: $pareja")
+}
 
