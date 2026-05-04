@@ -136,4 +136,17 @@ fun reto11() {
     println("\n--- Reto 11: Organizador de Maleta ---")
     println("Objetos por peso: $porPeso")
 }
+// 12. Verificador de Ruta Reversible
+fun reto12() {
+    val ruta = listOf(5 to 5, 6 to 6, 7 to 7, 6 to 6, 5 to 5)
+    var esEspejo = true
+    for (i in 0 until ruta.size / 2) {
+        if (ruta[i] != ruta[ruta.size - 1 - i]) {
+            esEspejo = false
+            break
+        }
+    }
 
+    println("\n--- Reto 12: Ruta Espejo ---")
+    println("¿Es espejo?: $esEspejo")
+}
