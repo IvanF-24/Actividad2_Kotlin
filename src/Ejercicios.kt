@@ -15,6 +15,7 @@ fun reto1() {
     println("--- Reto 1: Control de Gastos ---")
     println("Total: $total, Promedio: $promedio, Máximo: $max, Mínimo: $min")
 }
+// 2. Filtro de empleados senior
 fun reto2() {
     val empleados = listOf("Luis" to 22, "María" to 45, "Jorge" to 38, "Camila" to 29, "Andrés" to 33)
     val seniorNames = empleados
@@ -23,4 +24,12 @@ fun reto2() {
 
     println("\n--- Reto 2: Filtro Senior ---")
     println("Empleados Senior: $seniorNames")
+}
+// 3. Limpieza de Contactos Duplicados
+fun reto3() {
+    val contactos = listOf("301555", "312888", "301555", "323999", "312888", "355222", "301555")
+    val unicos = contactos.toSet().sorted()
+
+    println("\n--- Reto 3: Agenda Limpia ---")
+    println("Contactos únicos ordenados: $unicos")
 }
