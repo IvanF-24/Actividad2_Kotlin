@@ -3,5 +3,6 @@ fun main() {
 
     // Ejecución
     reto1()
+    reto2()
     println("\n=== FIN ===")
 }
