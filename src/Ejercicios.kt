@@ -354,4 +354,14 @@ fun reto26() {
     println("\n--- Reto 26: Compresión Logs ---")
     println("Resumen: $comprimido")
 }
+// 27. Premios a Vendedores
+fun reto27() {
+    val ventas = mapOf("Carlos" to 6500.0, "Lucía" to 7200.0, "Pedro" to 3000.0, "Sofía" to 8800.0)
+    val promedio = ventas.values.average()
+    val premiados = ventas.filter { it.value > promedio }.keys
+
+    println("\n--- Reto 27: Premios Vendedores ---")
+    println("Promedio: $promedio, Premiados: $premiados")
+}
+
 
