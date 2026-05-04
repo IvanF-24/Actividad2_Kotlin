@@ -160,4 +160,13 @@ fun reto13() {
         println("Camión ${index + 1}: ${lote.size} paquetes")
     }
 }
+// 14. Identificador de Ticket Único
+fun reto14() {
+    val tickets = listOf("TK-10", "TK-20", "TK-10", "TK-30", "TK-20", "TK-40")
+    val conteo = tickets.groupingBy { it }.eachCount()
+    val unico = tickets.firstOrNull { conteo[it] == 1 }
+
+    println("\n--- Reto 14: Ticket Único ---")
+    println("Primer ticket único: $unico")
+}
 
