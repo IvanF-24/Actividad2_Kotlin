@@ -218,3 +218,19 @@ fun reto18() {
     println("\n--- Reto 18: Fusión de Recetas ---")
     println("Lista de compras: $compras")
 }
+// 19. Ranking de Apps por Calificación
+fun reto19() {
+    val apps = mutableListOf("App X" to 4.1, "App Y" to 4.7, "App Z" to 3.9, "App W" to 4.3)
+    for (i in 0..<apps.size - 1) {
+        for (j in 0..<apps.size - 1 - i) {
+            if (apps[j].second < apps[j + 1].second) {
+                val temp = apps[j]
+                apps[j] = apps[j + 1]
+                apps[j + 1] = temp
+            }
+        }
+    }
+
+    println("\n--- Reto 19: Ranking de Apps ---")
+    println("Top Apps: $apps")
+}
