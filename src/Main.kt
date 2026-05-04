@@ -7,5 +7,6 @@ fun main() {
     reto3()
     reto4()
     reto5()
+    reto6()
     println("\n=== FIN ===")
 }
